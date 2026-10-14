@@ -132,8 +132,14 @@ async function userFromReq(req) {
 }
 
 const hits = new Map();
+/* Real visitor address. Behind a host such as Render or a Cloudflare link, every request arrives from the
+   host's own address, so use the forwarded address when it is present. */
+function clientIp(req) {
+  const fwd = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim();
+  return fwd || req.socket.remoteAddress || '';
+}
 function limit(req, key, max, windowMs) {
-  const k = key + (req.socket.remoteAddress || '');
+  const k = key + clientIp(req);
   const now = Date.now();
   let h = hits.get(k);
   if (!h || h.reset < now) { h = { n: 0, reset: now + windowMs }; hits.set(k, h); }
