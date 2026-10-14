@@ -1,0 +1,12 @@
+{
+  "name": "peerskill",
+  "version": "3.0.0",
+  "description": "PeerSkill - learn a skill, share a skill, grow together. Node.js backend with a JSON file database.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

@@ -1,0 +1,45 @@
+PEERSKILL - START HERE
+======================
+
+WHAT YOU HAVE
+  public\            the website you see (frontend): index.html, style.css, script.js
+  server.js          the backend: login, search, requests, chat, file upload
+  db.js              the JSON database engine
+  data\db.json       your saved data (created automatically the first time you run it)
+  data\uploads\      uploaded PDFs, slides, images (created automatically)
+
+STEP 1  Install Node.js (only once)
+  Go to https://nodejs.org, click the green LTS button, open the file, click Next until done.
+
+STEP 2  Start the website
+  Double-click:  start-peerskill.bat
+  A black window opens and your browser opens PeerSkill at  http://localhost:3000
+  Keep the black window open. Sign up and add your skills.
+
+STEP 3  Let your friends use it too (so you can connect with them)
+  Everyone must use the SAME running website. Choose one:
+
+  A) Friends on the same Wi-Fi
+     Read the black window: it prints a line like   On your phone:   http://192.168.0.4:3000
+     Your friends open exactly that address on their phones or laptops.
+
+  B) Friends anywhere (a free temporary link)
+     1. Keep start-peerskill.bat running.
+     2. Double-click  share-with-friends.bat  (the first time it installs a free tool, then run it again).
+     3. It prints a link ending in trycloudflare.com . Open that link yourself, log in,
+        and your Dashboard shows an "Invite your friends" box with a Copy button.
+     4. Send that link to your friends. The link changes each time you start it.
+
+  Your laptop must stay on and awake, with both windows open, while friends use the site.
+
+STEP 4  Connect
+  Your friend signs up with the link. You open the Community page, search their name,
+  and press Connect. They get a notification. Use Messages to chat, and the paperclip
+  to send PDFs or images.
+
+STOP / RESET
+  Close the black windows to stop. To erase everything, stop the website and delete the "data" folder.
+  To keep your data, copy the "data" folder somewhere safe.
+
+USING VS CODE (optional)
+  File > Open Folder > choose this folder > Terminal > New Terminal, then type:  node server.js
